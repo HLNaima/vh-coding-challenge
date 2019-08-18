@@ -17,9 +17,13 @@
             <a class="text-dark" href="/">Q & A</a>
         </h1>
         <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                
+                    @yield('content')
 
-            @yield('content')
-        
+                </div>
+            </div>        
         </div>
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     </body>

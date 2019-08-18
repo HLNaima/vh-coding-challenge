@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Question;
+use App\Answer;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -54,7 +55,14 @@ class QuestionController extends Controller
      */
     public function show(Question $question)
     {
-        //
+        $answers = Answer::where('question_id', $question->id)
+            ->orderBy('created_at')
+            ->get();
+            
+        return(view('questionsanswers.index', [
+            'question' => $question,
+            'answers' => $answers
+        ]));
     }
 
     /**

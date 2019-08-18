@@ -37,9 +37,17 @@ class QuestionAnswerController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Question $question)
+    public function store(Question $question)
     {
-        //
+        $attributes = request()->validate([
+            'answer' => ['required', 'min:5']
+        ]);
+        
+        $attributes['question_id'] = $question->id;
+
+        Answer::create($attributes);
+
+        return redirect("/questions/$question->id");
     }
 
     /**
