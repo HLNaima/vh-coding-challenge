@@ -33,7 +33,7 @@
                 </a>
             </h3>
             <div>
-                <span class="badge badge-primary">0 answers</span>
+                <span class="badge badge-primary">{{ $question->answers_count }} answer{{ $question->answers_count == 1 ? '' : 's'}}</span>
             </div>
         </div>
     @endforeach
