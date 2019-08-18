@@ -19,9 +19,7 @@
         </div>
 
         <div class="text-right">
-            <button class="btn btn-primary" type="submit">
-                Ask away
-            </button>
+            <button class="btn btn-primary" type="submit">Ask away</button>
         </div>
     </form>
 
@@ -35,9 +33,7 @@
                 </a>
             </h3>
             <div>
-                <span class="badge badge-primary">
-                    0 answers
-                </span>
+                <span class="badge badge-primary">0 answers</span>
             </div>
         </div>
     @endforeach
