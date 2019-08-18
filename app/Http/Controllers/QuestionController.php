@@ -14,7 +14,9 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return view('questions.index');
+        $questions = Question::all();
+
+        return view('questions.index', compact('questions'));
     }
 
     /**
@@ -33,9 +35,15 @@ class QuestionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $attributes = request()->validate([
+            'question' => ['required', 'min:5', 'ends_with:?']
+        ]);
+        
+        Question::create($attributes);
+
+        return redirect('/');
     }
 
     /**
