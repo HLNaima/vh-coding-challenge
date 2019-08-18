@@ -9,3 +9,5 @@ docker-compose exec $service_name bash
 ``` 
 
 `$service_name` is one of `app`, `db`, `webserver` (see docker-compose.yml file).
+
+More on this [here](https://github.com/HLNaima/Docker-compose-laravel-nginx-mysql.git).
