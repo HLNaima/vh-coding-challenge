@@ -6,7 +6,7 @@
         @csrf
         
         <div class="form-group">
-            <textarea name="question" class="form-control {{ $errors->has('question') ? 'is-invalid' : '' }}" placeholder="What are male baby chicks used for in the egg idustry?" required>{{ old('question') }}</textarea>
+            <textarea name="question" class="form-control {{ $errors->has('question') ? 'is-invalid' : '' }}" placeholder="{{$random_question}}" required>{{ old('question') }}</textarea>
             @if ($errors->has('question'))
                 <div class="invalid-feedback">
                     <ul>

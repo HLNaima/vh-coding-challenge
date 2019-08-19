@@ -16,8 +16,12 @@ class QuestionController extends Controller
     public function index()
     {
         $questions = Question::orderBy('created_at', 'desc')->withCount('answers')->get();
-
-        return view('questions.index', compact('questions'));
+        $random_question = Question::randomQuestion();
+        
+        return view('questions.index', [
+            'questions' => $questions,
+            'random_question' => $random_question
+        ]);
     }
 
     /**
