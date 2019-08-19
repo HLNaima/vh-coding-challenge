@@ -40,8 +40,8 @@ More on this [here](https://github.com/HLNaima/Docker-compose-laravel-nginx-mysq
 3. The list of questions **must** be sorted from **newest to oldest**.
 4. A question's list of answers **must** be sorted from **oldest to newest**.
 5. Use Bootstrap, no custom styles.
+6. The textarea/input for questions **must** display a random question for the placeholder. The random questions are up to you to write! Feel free to have fun with it.
 
 ## To do next
-1. The textarea/input for questions **must** display a random question for the placeholder. The random questions are up to you to write! Feel free to have fun with it.
-2. Try a different design that is not a copy of the provided example.
-3. Host the demo somewhere.
+1. Try a different design that is not a copy of the provided example.
+2. Host the demo somewhere.
